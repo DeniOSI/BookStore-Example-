@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+
+}
+
+<!Doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <tilte> Book Store </tilte>
+</head>
+<body>
+    <div>
+        <h3>Book seling </h3>
+        <table>
+            <tr>   <td> Book name</td></tr>
+            <tr>   <td> Author</td></tr>
+            <tr>   <td> Price</td></tr>
+            @foreach(var b in ViewBag.Books)
+            {
+                <tr>
+                    <td><p> @b.Name</p></td>
+                    <td><p> @b.Author</p></td>
+                    <td><p> @b.Price</p></td>
+                    <td><p> <a href="/Home/Buy/@b.id "> buy </a> </p></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>
